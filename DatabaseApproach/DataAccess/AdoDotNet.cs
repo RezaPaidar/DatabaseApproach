@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DatabaseApproach
+namespace DatabaseApproach.DataAccess
 {
     public class AdoDotNet
     {
@@ -65,7 +60,12 @@ namespace DatabaseApproach
                 Disconnect();
             }
         }
-
+        
+        /// <summary>
+        /// Select Operation
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
         public string Read_Opr(string query)
         {
             try
@@ -97,3 +97,4 @@ namespace DatabaseApproach
         }
     }
 }
+
