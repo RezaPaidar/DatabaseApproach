@@ -37,7 +37,8 @@ namespace DatabaseApproach
 
         static void Read_Data()
         {
-            var query = $"SELECT CONCAT(c.CFirstName,' ' ,c.CFamilyName) AS cName FROM Coach c INNER JOIN CoachHistory ch ON c.Cid = ch.Cid INNER JOIN Teams t ON ch.Teamid = t.Teamid WHERE ch.Teamid = 1";
+            var query = $"SELECT CONCAT(c.CFirstName,' ' ,c.CFamilyName) AS cName FROM Coach c "+
+                "INNER JOIN CoachHistory ch ON c.Cid = ch.Cid INNER JOIN Teams t ON ch.Teamid = t.Teamid WHERE ch.Teamid = 1";
 
             var db = new AdoDotNet();
             var obj = db.Read_Opr(query);
